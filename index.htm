@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculadora Figuras</title>
+
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container-titulo">
+            <h1 class="titulo-tipo-1">CALCULADORA DE FIGURAS</h1>
+            <h2 class="titulo-tipo-2">Por Jair Coral</h2>
+        </div>
+        <div class="container-header">
+            <img src="imgs/sena.ico" alt="sena">
+            <h3 class="titulo-tipo-3">Transversal de matemáticas.</h3>
+        </div>
+    </header>
+    <main>
+        <h2 class="titulo-tipo-2">¿Qué figura deseas calcular?</h2>
+        <div class="area-calculos">
+            <div class="figuras-planas campo-figura">
+                <div class="circulo figura">
+                    <fieldset class="datos">
+                        <legend>Círculo</legend>
+                        <label for="radio">Radio: <input type="text" id="radio" placeholder="Radio"></label>
+                    </fieldset>
+                    <img class="imagen-figura" src="imgs/circulo.png" alt=""><!-- AGREGAR FIGURA-->
+                    <div class="seleccion">
+                        <select id="opcion-circulo">
+                            <option value="" disabled selected style="display:none;">¿Qué deseas calcular?</option>
+                            <option value="2">Área</option>
+                            <option value="3">Perímetro</option>
+                        </select>                   
+                    </div>
+                    <button class="calcular" onclick="calcularCirculo()">Calcular</button>
+                </div>
+                <div class="rectangulo figura">
+                    <fieldset class="datos">
+                        <legend>Rectángulo</legend>
+                        <label for="base">Base: <input type="text" id="base" placeholder="Base"></label>
+                        <label for="altura">Altura: <input type="text" id="altura" placeholder="Altura"></label>
+                    </fieldset>
+                    <img class="imagen-figura" src="imgs/rectangulo.png" alt=""><!-- AGREGAR FIGURA-->
+                    <div class="seleccion">
+                        <select id="opcion-rectangulo">
+                            <option value="" disabled selected style="display:none;">¿Qué deseas calcular?</option>
+                            <option value="2">Área</option>
+                            <option value="3">Perímetro</option>
+                        </select>                   
+                    </div>
+                    <button class="calcular" onclick="calcularRectangulo()">Calcular</button>
+                </div>
+            </div>
+            <div class="figuras3d campo-figura">
+                <div class="esfera figura">
+                    <fieldset class="datos">
+                        <legend>Esfera</legend>
+                        <label for="radio-esfera">Radio: <input type="text" id="radio-esfera" placeholder="Radio"></label>
+                    </fieldset>
+                    <img class="imagen-figura" src="imgs/esfera.png" alt=""><!-- AGREGAR FIGURA-->
+                    <div class="seleccion">
+                        <select id="opcion-esfera">
+                            <option value="" disabled selected style="display:none;">¿Qué deseas calcular?</option>
+                            <option value="2">Área</option>
+                            <option value="3">Volumen</option>
+                        </select>                   
+                    </div>
+                    <button class="calcular" onclick="calcularEsfera()">Calcular</button>
+                </div>
+                <div class="cubo figura">
+                    <fieldset class="datos">
+                        <legend>Cubo</legend>
+                        <label for="lado-cubo">Lado: <input type="text" id="lado-cubo" placeholder="Lado"></label>
+                    </fieldset>
+                    <img class="imagen-figura" src="imgs/cubo.png" alt=""><!-- AGREGAR FIGURA-->
+                    <div class="seleccion">
+                        <select id="opcion-cubo">
+                            <option value="" disabled selected style="display:none;">¿Qué deseas calcular?</option>
+                            <option value="2">Área</option>
+                            <option value="3">Volumen</option>
+                            <option value="4">Périmetro</option>
+                        </select>                   
+                    </div>
+                    <button class="calcular" onclick="calcularCubo()">Calcular</button>
+                </div>
+            </div>
+        </div>    
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>
